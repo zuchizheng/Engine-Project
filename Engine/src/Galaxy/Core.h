@@ -9,3 +9,5 @@
 #else
 	#error Galaxy only support Windows!
 #endif //  GX_PLATFORM_WINDOWS
+
+#define BIT(x) (1 << x)

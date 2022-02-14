@@ -1,4 +1,5 @@
 #include "Galaxy.h"
+#include "Galaxy/EntryPoint.h"
 
 class SandBox : public Galaxy::Application
 {
