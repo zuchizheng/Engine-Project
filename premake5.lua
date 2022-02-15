@@ -18,6 +18,10 @@ project "Engine"
 	targetdir("bin/"..outputdir.."/%{prj.name}")
 	objdir("bin-int/"..outputdir.."/%{prj.name}")
 
+	--pchheader "gxpch.h"
+	--pchsource "Engine/src/gxpch.cpp"
+
+
 	files
 	{
 		"%{prj.name}/src/**.h",
@@ -43,7 +47,7 @@ project "Engine"
 
 		postbuildcommands
 		{
-			("{COPY} %{cfg.buildtarget.relpath}../bin")
+			("{COPY} %{cfg.buildtarget.relpath} ../bin/" ..outputdir.. "/SandBox")
 		}
 
 	filter "configurations:Debug"

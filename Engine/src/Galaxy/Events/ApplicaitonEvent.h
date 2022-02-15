@@ -2,7 +2,6 @@
 
 #include <sstream>
 #include "Event.h"
-#include <string>
 
 namespace Galaxy {
 
@@ -17,6 +16,7 @@ namespace Galaxy {
 
 		std::string ToString() const override
 		{
+			//std::string ss;
 			std::stringstream ss;
 			ss << "WindowResizeEvent: " << m_Width << ", " << m_Height;
 			return ss.str();

@@ -8,8 +8,6 @@ namespace Galaxy {
 
 	class GALAXY_API MouseMovedEvent : public Event
 	{
-	private:
-		float m_MouseX, m_MouseY;
 	public:
 		MouseMovedEvent(float x, float y)
 			: m_MouseX(x), m_MouseY(y)
@@ -28,6 +26,8 @@ namespace Galaxy {
 
 		EVENT_CLASS_TYPE(MouseMoved)
 		EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
+	private:
+		float m_MouseX, m_MouseY;
 	};
 
 	class GALAXY_API MouseScrolledEvent : public Event

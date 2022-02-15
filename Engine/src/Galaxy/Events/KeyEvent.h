@@ -20,10 +20,7 @@ namespace Galaxy {
 	};
 
 	class GALAXY_API KeyPressedEvent : public KeyEvent
-	{
-	private:
-		int m_RepeatCount;
-	
+	{	
 	public:
 		KeyPressedEvent(int keycode, int repeatCount)
 			: KeyEvent(keycode), m_RepeatCount(repeatCount){}
@@ -38,6 +35,8 @@ namespace Galaxy {
 		}
 
 		EVENT_CLASS_TYPE(KeyPressed)
+	private:
+		int m_RepeatCount;
 	};
 
 	class GALAXY_API KeyReleasedEvent : public KeyEvent

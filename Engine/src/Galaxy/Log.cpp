@@ -1,5 +1,9 @@
 #include "Log.h"
 
+#include "spdlog/sinks/stdout_color_sinks.h"
+#include "gxpch.h"
+
+
 namespace Galaxy {
 
 	std::shared_ptr<spdlog::logger> Log::s_CoreLogger;

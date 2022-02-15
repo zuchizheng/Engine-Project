@@ -1,7 +1,9 @@
+#include "gxpch.h"
+
 #include "Application.h"
 
-#include "Events/ApplicaitonEvent.h"
-#include "Log.h"
+#include "Galaxy/Events/ApplicaitonEvent.h"
+#include "Galaxy/Log.h"
 
 namespace Galaxy {
 	Application::Application()
