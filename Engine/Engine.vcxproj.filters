@@ -1,45 +1,51 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="Galaxy">
+      <UniqueIdentifier>{CB7795B4-B719-C08A-A0D4-D3DE8C1547DB}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="Galaxy\Events">
+      <UniqueIdentifier>{4F1193D8-BBD1-0E0F-840C-588CF08B53EB}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="src">
-      <UniqueIdentifier>{82087e2a-0587-4b9c-be45-ae1036fe52d7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\Galaxy">
-      <UniqueIdentifier>{41d35012-2cfd-40cc-922b-0c143a3cf15f}</UniqueIdentifier>
-    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Galaxy.h" />
+    <ClInclude Include="src\Galaxy\Application.h">
+      <Filter>Galaxy</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Galaxy\Core.h">
+      <Filter>Galaxy</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Galaxy\EntryPoint.h">
+      <Filter>Galaxy</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Galaxy\Events\ApplicaitonEvent.h">
+      <Filter>Galaxy\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Galaxy\Events\Event.h">
+      <Filter>Galaxy\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Galaxy\Events\KeyEvent.h">
+      <Filter>Galaxy\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Galaxy\Events\MouseEvent.h">
+      <Filter>Galaxy\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Galaxy\Log.h">
+      <Filter>Galaxy</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gxpch.h" />
+    <ClInclude Include="src\Galaxy\Window.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Galaxy\Application.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Galaxy</Filter>
     </ClCompile>
-    <ClCompile Include="src\Galaxy\Core.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\Galaxy\Log.cpp">
+      <Filter>Galaxy</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="src\Galaxy\Application.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Galaxy\Core.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Galaxy.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Galaxy\EntryPoint.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <ClCompile Include="src\gxpch.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>

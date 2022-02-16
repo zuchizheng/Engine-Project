@@ -2,7 +2,9 @@
 #include "Galaxy/Core.h"
 
 //#include <string>
-#include <functional>
+//#include <functional>
+#include "gxpch.h"
+
 namespace Galaxy {
 
 	// Events in Hazel are currently blocking, meaning when an event occurs it

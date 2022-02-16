@@ -5,10 +5,12 @@
 #include "Galaxy/Events/ApplicaitonEvent.h"
 #include "Galaxy/Log.h"
 
+#include <GLFW/glfw3.h>
+
 namespace Galaxy {
 	Application::Application()
 	{
-
+		m_Window = std::unique_ptr<Window>(Window::Create());
 	}
 
 	Application::~Application()
@@ -18,16 +20,12 @@ namespace Galaxy {
 
 	void Application::Run()
 	{
-		WindowResizeEvent e(1200, 720);
-		if (e.IsInCategoty(EventCategoryApplication))
+		while (m_Running)
 		{
-			GX_TRACE(e);
+			glClearColor(1, 0, 1, 1);
+			glClear(GL_COLOR_BUFFER_BIT);
+			m_Window->OnUpdate();
 		}
-		if (e.IsInCategoty(EventCategoryInput))
-		{
-			GX_TRACE(e);
-		}
-		while (true);
 
 	}
 }
