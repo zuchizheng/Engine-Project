@@ -12,8 +12,12 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
 IncludeDir["GLFW"] = "Engine/vendor/GLFW/include"
+IncludeDir["Glad"] = "Engine/vendor/Glad/include"
+IncludeDir["ImGui"] = "Engine/vendor/imgui"
 
 include "Engine/vendor/GLFW"
+include "Engine/vendor/Glad"
+include "Engine/vendor/imgui"
 
 project "Engine"
 	location "Engine"
@@ -37,12 +41,16 @@ project "Engine"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}",
+		"%{IncludeDir.ImGui}"
 	}
 
 	links
 	{
 		"GLFW",
+		"Glad",
+		"ImGui",
 		"opengl32.lib"
 	}
 
@@ -54,7 +62,8 @@ project "Engine"
 		defines
 		{
 			"GX_PLATFORM_WINDOWS",
-			"GX_BUILD_DLL"
+			"GX_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands
@@ -64,14 +73,17 @@ project "Engine"
 
 	filter "configurations:Debug"
 		defines "GX_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "GX_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "GX_DIST"
+		buildoptions "/MD"
 		optimize "On"
 
 project "SandBox"
@@ -111,12 +123,15 @@ project "SandBox"
 
 	filter "configurations:Debug"
 		defines "GX_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "GX_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "GX_DIST"
+		buildoptions "/MD"
 		optimize "On"

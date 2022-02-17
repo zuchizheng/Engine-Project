@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Galaxy/Window.h"
+
 #include <GLFW/glfw3.h>
 
 namespace Galaxy {
@@ -16,7 +17,7 @@ namespace Galaxy {
 		inline unsigned int GetHeight() const override { return m_Data.Height; }
 
 		//Window attributes
-		inline void SetEventWhenCallback(const EventCallbackFn& callback) override { m_Data.EventCallback = callback; }
+		inline void SetEventCallback(const EventCallbackFn& callback) override { m_Data.EventCallback = callback; }
 		void SetVSync(bool enabled) override;
 		bool IsVSync() const override;
 	private:

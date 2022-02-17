@@ -7,6 +7,12 @@
     <Filter Include="Galaxy\Events">
       <UniqueIdentifier>{4F1193D8-BBD1-0E0F-840C-588CF08B53EB}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Galaxy.h" />
@@ -31,21 +37,43 @@
     <ClInclude Include="src\Galaxy\Events\MouseEvent.h">
       <Filter>Galaxy\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Galaxy\Layer.h">
+      <Filter>Galaxy</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Galaxy\LayerStack.h">
+      <Filter>Galaxy</Filter>
+    </ClInclude>
     <ClInclude Include="src\Galaxy\Log.h">
       <Filter>Galaxy</Filter>
     </ClInclude>
+    <ClInclude Include="src\Galaxy\Window.h">
+      <Filter>Galaxy</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\gxpch.h" />
-    <ClInclude Include="src\Galaxy\Window.h" />
-    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
+    <ClInclude Include="src\Galaxy\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Galaxy\Application.cpp">
       <Filter>Galaxy</Filter>
     </ClCompile>
+    <ClCompile Include="src\Galaxy\Layer.cpp">
+      <Filter>Galaxy</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Galaxy\LayerStack.cpp">
+      <Filter>Galaxy</Filter>
+    </ClCompile>
     <ClCompile Include="src\Galaxy\Log.cpp">
       <Filter>Galaxy</Filter>
     </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
     <ClCompile Include="src\gxpch.cpp" />
-    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
+    <ClCompile Include="src\Galaxy\ImGui\ImGuiLayer.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
   </ItemGroup>
 </Project>
