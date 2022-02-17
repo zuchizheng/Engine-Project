@@ -9,7 +9,7 @@
 #include "glad/glad.h"
 
 namespace Galaxy {
-
+	
 	static bool s_GLFWInitialized = false;
 
 	static void GLFWErrorCallback(int error, const char* description)
@@ -98,6 +98,14 @@ namespace Galaxy {
 				break;
 			}
 			}
+		});
+
+		glfwSetCharCallback(m_Window, [](GLFWwindow* window, unsigned int keycode)
+		{
+			WindowDate& data = *(WindowDate*)glfwGetWindowUserPointer(window);
+
+			KeyTypedEvent event(keycode);
+			data.EventCallback(event);
 		});
 
 		glfwSetMouseButtonCallback(m_Window, [](GLFWwindow* window, int button, int action, int mods)
